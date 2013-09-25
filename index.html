@@ -37,6 +37,10 @@
             <img src="img/slides_qr.png" style="background: none; border: 0; padding-left: 135px;" />
             <h3 class="em">The Cool Way to Build iOS Apps</h3>
             <p class="em2" >By Gant Laborde</p>
+
+            <aside class="notes">
+              Scan the QR code for all slides AND references during this talk.  Quick census, how many Ruby Developers do we have? 
+            </aside>
           </section>
 
           <section>
@@ -70,9 +74,11 @@
             <a href="http://www.meetup.rubymotion.com">meetup.RubyMotion.com</a>
           </section>
 
-          <aside class="notes">
-            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-          </aside>
+          <section>
+            <h1>Matt Garrison</h1>
+            <img src="img/matt.png" id="me" />
+          </section>
+
       </section>
 
       <section>
@@ -85,69 +91,69 @@
 
         <section>
           <h2 class="em">RubyMotion - Wat?</h2>
+          <div class="fragment fade-in">
+            <h3>/ˈro͞obē-mōSHən/</h3>
+            <em>noun trademark</em>
+            <br/>
+            1. A proprietary toolchain, created by HipByte SPRL, for developing native <span class="em2">iOS</span> and <span class="em2">OS X</span> applications on Apple devices and computers using the <strong>Ruby</strong> programming language.
+          </div>
           <p class="fragment fade-in">
-            WORDS <span class="em2">WORDS</span> WORDS <span class="em2">WORDS</span> WORDS
+            <span class="em">OR</span>
           </p>
-          <p class="fragment fade-in">
-            WORDS <span class="em2">WORDS</span> WORDS
-          </p>
-          <p class="fragment fade-in">
-            WORDS
-          </p>
+          <h2 class="fragment fade-in">
+            Apps the Ruby Way
+          </h2>
+
+          <aside class="notes">
+            Ruby Rockstar!!!
+          </aside>
         </section>
 
       </section>
 
       <section>
         <section>
-          <h2 class="em">Hello World Stuff</h2>
+          <h2 class="em">Quick Example</h2>
           <p class="fragment fade-in">
-            WORDS <span class="em2">WORDS</span> and <span class="em2">WORDS</span> WORDS.
+            <span class="em2">Objective-C</span> button tap
           </p>
           <div class="fragment fade-in">
             <pre><code>
-class AppDelegate
-  def application(application, didFinishLaunchingWithOptions:launchOptions)
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.makeKeyAndVisible
-    true
-  end
-end
+  [button addTarget:self action:@selector(buttonTapped:) 
+      forControlEvents: UIControlEventTouchUpInside];
 
+  //  Elsewhere
+
+  - (void)buttonTapped:(id)sender {
+      self.view.backgroundColor = [UIColor redColor];
+  }
             </code></pre>
           </div>
           <p class="fragment fade-in">
-            Adding Hello World Controller
+            <span class="em2">RubyMotion</span> button tap <small>(with sugarcube gem)</small>
           </p>
           <div class="fragment fade-in">
             <pre class="big-code"><code>
-class AppDelegate
-  def application(application, didFinishLaunchingWithOptions:launchOptions)
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = HelloWorldController.new
-    @window.makeKeyAndVisible
-    true
+  button.on(:touch) do
+    self.view.backgroundColor = :red.uicolor
   end
-end
 
             </code></pre>
           </div>
+          <aside class="notes">
+            Less delegates and targets; more Ruby blocks.  Don't get me started on "addTarget:self". 
+          </aside>
         </section>
 
         <section>
-          <h2 class="em">MOAR Down</h2>
-          <p class="fragment fade-in">
-            Let's do blah!  DEEPER
+          <h2 class="em"><pre>lessLike:objectiveC:</pre> and more <code>like_ruby</code></h2>
+          <p>
+            - Clay Allsopp
           </p>
-          <div class="fragment fade-in">
-            <pre class="big-code"><code data-trim>
-              code
-            </code></pre>
-          </div>
         </section>
 
         <section>
-          <h2 class="em">Again Deeper</h2>
+          <h2 class="em">MOAR SLIDES Deeper</h2>
           <p class="fragment fade-in">
             Stuff
           </p>
