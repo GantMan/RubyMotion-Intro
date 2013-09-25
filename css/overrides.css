@@ -52,6 +52,13 @@ body {
   z-index:1500;
 }
 
+#me {
+  border: 0;
+  margin-top: -20px;
+  background: none;
+  margin-bottom: -50px;
+}
+
 #logo {
   border:0;
   background:url('ruby.png') no-repeat top;
