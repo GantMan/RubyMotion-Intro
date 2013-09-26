@@ -10,3 +10,4 @@ Presentation at [GNO code](https://twitter.com/gnocode) on October 10th, 2013
 * [@GantLaborde](https://twitter.com/GantLaborde) Twitter
 * Packt Publishing RubyMotion Book - [LINK](http://www.amazon.com/Instant-RubyMotion-App-Development-ebook/dp/B00E5DH4LG/ref=sr_1_1?ie=UTF8&qid=1380089322&sr=8-1&keywords=RubyMotion+app+development)
 * Fun Stickers - [LINK](http://www.redbubble.com/people/gantman?ref=account-nav-dropdown)
+* under_score better than camelCase - [LINK](http://www.cs.kent.edu/~jmaletic/papers/ICPC2010-CamelCaseUnderScoreClouds.pdf)

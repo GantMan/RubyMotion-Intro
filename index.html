@@ -39,7 +39,7 @@
             <p class="em2" >By Gant Laborde</p>
 
             <aside class="notes">
-              Scan the QR code for all slides AND references during this talk.  Quick census, how many Ruby Developers do we have? 
+              Scan the QR code for all slides AND references during this talk.  
             </aside>
           </section>
 
@@ -87,6 +87,9 @@
           <p class="fragment fade-in">
             <img src="img/wat.jpg" />
           </p>
+          <aside class="notes">
+            How many Ruby Devs?  How many iPhone devs?
+          </aside>
         </section>
 
         <section>
@@ -95,7 +98,7 @@
             <h3>/ˈro͞obē-mōSHən/</h3>
             <em>noun trademark</em>
             <br/>
-            1. A proprietary toolchain, created by HipByte SPRL, for developing native <span class="em2">iOS</span> and <span class="em2">OS X</span> applications on Apple devices and computers using the <strong>Ruby</strong> programming language.
+            1. A proprietary toolchain, created by HipByte SPRL, for developing native <span class="em2">iOS</span> and <span class="em2">OS X</span> applications on Apple devices and computers by interpreting and statically compiling to an LLVM, the <strong>Ruby</strong> programming language.
           </div>
           <p class="fragment fade-in">
             <span class="em">OR</span>
@@ -123,6 +126,39 @@
       forControlEvents: UIControlEventTouchUpInside];
 
   //  Elsewhere
+  - (void)buttonTapped:(id)sender {
+      self.view.backgroundColor = [UIColor redColor];
+  }
+            </code></pre>
+          </div>
+          <p class="fragment fade-in">
+            <span class="em2">RubyMotion</span> button tap 
+          </p>
+          <div class="fragment fade-in">
+            <pre><code>
+  button.addTarget(self, action:'button_tapped', 
+      forControlEvents:UIControlEventTouchUpInside)
+
+  # Elsewhere
+  def button_tapped
+    self.view.backgroundColor = UIColor.redColor
+  end
+
+            </code></pre>
+          </div>          
+        </section>
+
+        <section>
+          <h2 class="em">Better Example</h2>
+          <p>
+            <span class="em2">Objective-C</span> button tap
+          </p>
+          <div>
+            <pre><code>
+  [button addTarget:self action:@selector(buttonTapped:) 
+      forControlEvents: UIControlEventTouchUpInside];
+
+  //  Elsewhere
 
   - (void)buttonTapped:(id)sender {
       self.view.backgroundColor = [UIColor redColor];
@@ -143,7 +179,7 @@
           <aside class="notes">
             Less delegates and targets; more Ruby blocks.  Don't get me started on "addTarget:self". 
           </aside>
-        </section>
+        </section>        
 
         <section>
           <h2 class="em"><pre>lessLike:objectiveC:</pre> and more <code>like_ruby</code></h2>
@@ -152,37 +188,40 @@
           </p>
         </section>
 
-        <section>
-          <h2 class="em">MOAR SLIDES Deeper</h2>
-          <p class="fragment fade-in">
-            Stuff
-          </p>
-          <div class="fragment fade-in">
-            <pre class="big-code"><code data-trim>
-              code
-            </code></pre>
-          </div>
-        </section>
-
       </section>
+
       <section>
        <section>
-        <h2 class="em">Something Interesting</h2>
+        <h2 class="em">What's So Great about RubyMotion?</h2>
         <p class="fragment fade-in">
-          WORDS <span class="em">WORDS</span> WORDS  <span class="em">WORDS</span> WORDS.
+          <em>In my opinion</em>
         </p>
-        <pre class="big-code  fragment fade-in"><code class="align-center">
-...
-Add me bc I'm cool
-...
-        </code></pre>
+        <ul>
+          <li class="fragment fade-in">Gems and Community</li>
+          <li class="fragment fade-in">Testing!</li>
+          <li class="fragment fade-in">Readability</li>
+          <li class="fragment fade-in">Natively Compiled</li>
+        </ul>
+
+        <aside class="notes">
+          <ul>
+            <li>Gems for RM as well as lots of existing gems!</li>
+            <li>TDD with MacBacon is easy!</li>
+            <li>Eye tracking study at Kent State for snake_case</li>
+            <li>As opposed to other solutions (like PhoneGap) that do not</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section>
+        <h2 class="em">What's So Great about RubyMotion?</h2>
         <p class="fragment fade-in">
-          It's totally getting added
+          <span class="em2">RubyMotion</span> is to <span class="em2">Objective-C</span>
+        </p>
+        <p class="fragment fade-in">
+          As <span class="em2">JQuery</span> is to <span class="em2">Javascript</span>
         </p>
 
-        <pre class="big-code fragment fade-in"><code data-trim>
-          code with added stuff
-        </code></pre>
       </section>
     </section>
 
