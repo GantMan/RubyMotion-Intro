@@ -251,12 +251,64 @@
 
     <section>
       <section>
-        <h2 class="em">Let's Code!</h2>
+        <h2 class="em">Let's Look At Code!</h2>
         <ul>
           <li class="fragment fade-in">Classic - <span class="em2">Hello World</span></li>
           <li class="fragment fade-in">Full App - <span class="em2">Ruby Trivia</span></li>
           <li class="fragment fade-in">Games!</li>
         </ul>        
+      </section>
+      <section>
+        <h2 class="em">Hello World</h2>
+        <pre><code>
+  $ motion create test                                                                                                                                                                    
+        </code></pre>
+
+        <p class="fragment fade-in">
+          Running Tests will fail
+        </p>
+
+        <div class="fragment fade-in">   
+          <pre><code>
+  class AppDelegate
+    def application(application, didFinishLaunchingWithOptions:launchOptions)
+      @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+      @window.rootViewController = HelloWorldController.new
+      @window.makeKeyAndVisible
+      true
+    end
+  end
+          </code></pre>
+          <pre><code>
+  class HelloWorldController < UIViewController
+    def viewDidLoad
+      p "Hai"
+    end
+  end
+          </code></pre>
+        </div>
+        <p class="fragment fade-in">
+          Now tests pass!
+        </p>
+      </section>
+      <section>
+        <h2 class="em">Hello World - REPL</h2>
+        <pre><code>
+  main_view = UIApplication.sharedApplication.windows[0].rootViewController.view
+  main_view.backgroundColor = UIColor.blueColor
+        </code></pre>
+        <p class="fragment fade-in">
+          OR, just command click the view!
+        </p>
+        <div class="fragment fade-in">
+          <pre><code>
+  self.backgroundColor = UIColor.whiteColor
+  @label = UILabel.new
+  @label.text = "Hello World"
+  self.addSubview(@label)
+
+          </code></pre>       
+        </div> 
       </section>
     </section>
 
