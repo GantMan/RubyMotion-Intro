@@ -290,6 +290,9 @@
         <p class="fragment fade-in">
           Now tests pass!
         </p>
+        <asside class="notes">
+          If you are interested in a full TDD/BDD build of Hello World, check my book
+        </asside>
       </section>
       <section>
         <h2 class="em">Hello World - REPL</h2>
@@ -298,17 +301,24 @@
   main_view.backgroundColor = UIColor.blueColor
         </code></pre>
         <p class="fragment fade-in">
-          OR, just command click the view!
+          <strong>OR</strong>, just command click the view!
         </p>
         <div class="fragment fade-in">
           <pre><code>
+  # REPL input
   self.backgroundColor = UIColor.whiteColor
   @label = UILabel.new
   @label.text = "Hello World"
   self.addSubview(@label)
+  
+  # get down from there!
+  @label.center = [100, 100]
 
           </code></pre>       
         </div> 
+        <p class="fragment fade-in">
+          <strong>OR</strong>, use sugarcube-repl's <code>tree</code> command.
+        </p>
       </section>
     </section>
 

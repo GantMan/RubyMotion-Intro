@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (10.1.0)
+    sugarcube (1.0.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake
+  sugarcube
