@@ -79,6 +79,7 @@
           <section>
             <h1>Matt Garrison</h1>
             <img src="img/matt.png" id="me" />
+            <p class="em">@mattsgarrison</p>
           </section>
 
       </section>
@@ -372,19 +373,6 @@
 					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
           ]
         });
-Reveal.configure({
-  keyboard: {
-    '27': function() {
-      var on = document.body.className.indexOf('no-clouds') >= 0;
-      if(on) {
-        document.body.className = document.body.className.replace(' no-clouds','');
-      }
-      else {
-        document.body.className += ' no-clouds';
-      }
-    }
-  }
-});
 
 </script>
 
