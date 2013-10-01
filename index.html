@@ -237,7 +237,7 @@
           ... plus <span class="em2">MacBacon</span> has spec tests like <span class="em2">Jasmine</span> would
         </p>
         <p class="fragment fade-in">
-          ... plus the <span class="em2">REPL</span> lets you live-modify like developer tools
+          ... plus the <span class="em2">REPL</span> lets you live-modify like <span class="em2">developer tools</span>
         </p>
         <p class="fragment fade-in">
           ... plus it compiles and obfuscates your final codebase 
@@ -292,7 +292,8 @@
           Now tests pass!
         </p>
         <aside class="notes">
-          If you are interested in a full TDD/BDD build of Hello World, check my book
+          <p>This makes an iOS application, you can build an OS X application by passing in the correct template</p>
+          <p>If you are interested in a full TDD/BDD build of Hello World, check my book</p>
         </aside>
       </section>
       <section>
@@ -310,6 +311,7 @@
   self.backgroundColor = UIColor.whiteColor
   @label = UILabel.new
   @label.text = "Hello World"
+  @label.sizeToFit
   self.addSubview(@label)
   
   # get down from there!
@@ -320,6 +322,17 @@
         <p class="fragment fade-in">
           <strong>OR</strong>, use sugarcube-repl's <code>tree</code> command.
         </p>
+        <aside class="notes">
+          <p>Accessing the view via the UIKit framework is a pain!  Fortunately, you can just command click</p>
+          <p>Can't command click because things are layered?  Try sugarcube-repl's tree command.</p>
+          <ul>
+            <li>a 2</li>
+            <li>a down 40</li>
+            <li>a.backgroundColor = :red.uicolor</li>
+            <li>a wider 100<li>
+          </ul>
+          <p>.uicolor gets converted to objective-c.  They all do!  Take a look at `test = {}`, `test.class`, `test.class`, `test.class.ancestors`</p>
+        </aside>
       </section>
     </section>
 
@@ -327,6 +340,17 @@
       <section>
         <h2>Code Example #2</h2>
         <h3 class="em">Ruby Trivia</h3>
+        <ul>
+          <li class="fragment fade-in">sugarcube</li>
+          <li class="fragment fade-in">Teacup</li>
+          <li class="fragment fade-in">ProMotion</li>
+          <li class="fragment fade-in">BubbleWrap</li>
+          <li class="fragment fade-in">formotion</li>
+          <li class="fragment fade-in">and more ...</li>
+        </ul>
+        <aside class="notes">
+          BubbleWrap brings in little demi-god objects that help you avoid the need for intimate knowledge of Cocoa Touch dynamics but following them, whereas sugarcube gives you more ruby-esque ways of doing existing items and then some features that are completely new!  Both maintianed by RubyMotion Group
+        </aside>
       </section>
       <section>
         <img src="img/rt1.PNG" />
