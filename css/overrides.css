@@ -144,3 +144,8 @@ body {
 .align-center {
   text-align:center;
 }
+
+.joybox {
+  background: url(../img/cat-intro2.png) no-repeat center 50px, url("../img/bg-intro.png") no-repeat center;
+  min-height: 600px;
+}
