@@ -10,5 +10,5 @@ Motion::Project::App.setup do |app|
   app.icons = ['icon.png', 'icon@2x.png']
   app.prerendered_icon = true
   app.deployment_target = "6.0"
-  app.codesign_certificate = "iPhone Distribution: Iconoclast Labs LLC"
+  app.codesign_certificate = "iPhone Developer: Gant Laborde (RXUU9PHTGA)"
 end
