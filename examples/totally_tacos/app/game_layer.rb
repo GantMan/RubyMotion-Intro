@@ -6,13 +6,33 @@ class GameLayer < Joybox::Core::Layer
   scene
 
   def on_enter
-    @cur_size = 1.0
-
     background = Sprite.new file_name: 'background.png', position: Screen.center
     self << background
 
     @face = Sprite.new file_name: 'normal.png', position: Screen.center, alive: true
     self << @face
+
+    show_menu
+  end
+
+  def show_menu
+    p "Menu shown"
+    MenuLabel.default_font_size = 60
+
+    start_label = MenuLabel.new text: "Start Game", color: '#000000'.to_color, do |menu_item|
+      start_game
+    end
+
+    @menu = Menu.new items: [start_label], position: [Screen.half_width, Screen.half_height]
+    @menu.align_items_vertically
+    self.add_child(@menu, z: 1)
+  end
+
+  def start_game
+    p "Game Start"
+
+    @cur_size = 1.0
+    @menu.run_action Visibility.hide
 
     on_touches_began do |touches, event|
       touch = touches.any_object
@@ -27,7 +47,13 @@ class GameLayer < Joybox::Core::Layer
     schedule_update do |dt|
       launch_tacos
       check_for_collisions if @face[:alive]
-    end
+    end   
+
+  end
+
+  def lose_game
+    p "Ya lost"
+    @tacos.each(&:stop_all_actions)
   end
 
   def launch_tacos
@@ -56,7 +82,7 @@ class GameLayer < Joybox::Core::Layer
     if @face[:alive]
       @tacos.each do |taco|
         if CGRectIntersectsRect(taco.bounding_box, @face.bounding_box)
-          @tacos.each(&:stop_all_actions) if @cur_size > 3 # end game
+          lose_game if @cur_size > 3 # end game
 
           @face[:alive] = false
           @cur_size += 1

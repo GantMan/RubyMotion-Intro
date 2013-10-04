@@ -16,6 +16,7 @@ Presentation at [GNO code](https://twitter.com/gnocode) on October 10th, 2013
 * Packt Publishing RubyMotion Book - [LINK](http://www.amazon.com/Instant-RubyMotion-App-Development-ebook/dp/B00E5DH4LG/ref=sr_1_1?ie=UTF8&qid=1380089322&sr=8-1&keywords=RubyMotion+app+development)
 * RubyTrivia - [LINK](https://github.com/IconoclastLabs/rubytrivia)
 * Sugarcube Gem - [LINK](https://github.com/rubymotion/sugarcube)
+* Asteroids Game Base Tutorial - [LINK](http://blog.rubymotion.com/post/57465814533/create-an-asteroids-game-for-ios-in-15-minutes-with)
 
 #### Ancillary References n Stuff
 * RubyMotion Site - [LINK](http://www.rubymotion.com/)
@@ -23,6 +24,6 @@ Presentation at [GNO code](https://twitter.com/gnocode) on October 10th, 2013
 * under_score better than camelCase - [LINK](http://www.cs.kent.edu/~jmaletic/papers/ICPC2010-CamelCaseUnderScoreClouds.pdf)
 * Joybox gem - [LINK](http://joybox.io/)
 * Founder of Integrallis Using Joybox - [LINK](http://www.infoq.com/news/2013/09/ios-games-ruby)
-* Asteroids Game Base Tutorial - [LINK](http://blog.rubymotion.com/post/57465814533/create-an-asteroids-game-for-ios-in-15-minutes-with)
+* Joybox Documentation - [LINK](https://github.com/CurveBeryl/Joybox-Documentation)
 
 ![CONTACT US](./img/contact.png "Iconoclast Labs Contact")
