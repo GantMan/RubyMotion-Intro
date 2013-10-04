@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project/template/ios'
+require "rubygems"
+require 'bundler'
+Bundler.require
 require 'joybox'
 
 Motion::Project::App.setup do |app|
@@ -9,6 +12,6 @@ Motion::Project::App.setup do |app|
   app.device_family = [:ipad]
   app.icons = ['icon.png', 'icon@2x.png']
   app.prerendered_icon = true
-  app.deployment_target = "6.0"
-  app.codesign_certificate = "iPhone Distribution: Iconoclast Labs LLC"
+  app.deployment_target = "6.1"
+  app.codesign_certificate = 'iPhone Distribution: Iconoclast Labs LLC'
 end
