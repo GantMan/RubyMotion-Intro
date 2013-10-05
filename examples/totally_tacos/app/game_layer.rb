@@ -1,6 +1,6 @@
 class GameLayer < Joybox::Core::Layer
 
-  MaximumTacos = 10
+  @max_tacos = 0
   @cur_size = 1.0
 
   scene
@@ -10,6 +10,7 @@ class GameLayer < Joybox::Core::Layer
     self << background
 
     @face = Sprite.new file_name: 'normal.png', position: Screen.center, alive: true
+    @face.run_action Fade.out
     self << @face
 
     show_menu
@@ -32,7 +33,11 @@ class GameLayer < Joybox::Core::Layer
     p "Game Start"
 
     @cur_size = 1.0
+    @max_tacos = 10
     @menu.run_action Visibility.hide
+    @face.run_action Fade.in
+    @face.position = Screen.center
+    @face.scale = @cur_size
 
     on_touches_began do |touches, event|
       touch = touches.any_object
@@ -53,21 +58,25 @@ class GameLayer < Joybox::Core::Layer
 
   def lose_game
     p "Ya lost"
-    @tacos.each(&:stop_all_actions)
+    @max_tacos = 0
+    @face.stop_all_actions
+    @face.run_action Fade.out
+    @face.run_action Rotate.to angle: 360
+    @menu.run_action Visibility.show
   end
 
   def launch_tacos
     @tacos ||= Array.new
 
-    if @tacos.size <= MaximumTacos
-      missing_tacos = MaximumTacos - @tacos.size
+    if @tacos.size <= @max_tacos
+      missing_tacos = @max_tacos - @tacos.size
 
       missing_tacos.times do
         taco = TacoSprite.new
 
         move_action = Move.to position: taco.end_position, duration: 4.0
         callback_action = Callback.with { |taco| @tacos.delete taco }
-        taco.run_action Rotate.by angle: rand(360)
+        taco.run_action Rotate.by angle: rand(360), duration: 4.0
         taco.run_action Sequence.with actions: [move_action, callback_action]
 
         self << taco
@@ -82,17 +91,18 @@ class GameLayer < Joybox::Core::Layer
     if @face[:alive]
       @tacos.each do |taco|
         if CGRectIntersectsRect(taco.bounding_box, @face.bounding_box)
-          lose_game if @cur_size > 3 # end game
 
           @face[:alive] = false
           @cur_size += 1
           @face.file_name = "eat.png"
           @face.run_action Blink.with times: 20, duration: 3.0
           @face.run_action Scale.to scale: @cur_size
+
+          lose_game if @cur_size > 3
           break
         end
-      end
-    end
+      end #each
+    end #if
   end
 
 end
