@@ -61,7 +61,6 @@ class GameLayer < Joybox::Core::Layer
     @max_tacos = 0
     @face.stop_all_actions
     @face.run_action Fade.out
-    @face.run_action Rotate.to angle: 360
     @menu.run_action Visibility.show
   end
 
@@ -95,7 +94,8 @@ class GameLayer < Joybox::Core::Layer
           @face[:alive] = false
           @cur_size += 1
           @face.file_name = "eat.png"
-          @face.run_action Blink.with times: 20, duration: 3.0
+          @face.run_action Wiggle.with times: 5, duration: 2.0
+          #@face.run_action Blink.with times: 20, duration: 3.0
           @face.run_action Scale.to scale: @cur_size
 
           lose_game if @cur_size > 3
