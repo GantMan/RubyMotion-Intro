@@ -6,6 +6,8 @@ class GameLayer < Joybox::Core::Layer
   scene
 
   def on_enter
+    SimpleAudioEngine.sharedEngine.playBackgroundMusic "MexicanFiesta.mp3"
+
     background = Sprite.new file_name: 'background.png', position: Screen.center
     self << background
 
@@ -38,6 +40,7 @@ class GameLayer < Joybox::Core::Layer
     @face.run_action Fade.in
     @face.position = Screen.center
     @face.scale = @cur_size
+    @face.rotation = 0
 
     on_touches_began do |touches, event|
       touch = touches.any_object
