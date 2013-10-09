@@ -20,7 +20,7 @@ Presentation at [GNO code](https://twitter.com/gnocode) on October 10th, 2013
 
 #### Ancillary References n Stuff
 * RubyMotion Site - [LINK](http://www.rubymotion.com/)
-* Fun Stickers - [LINK](http://www.redbubble.com/people/gantman?ref=account-nav-dropdown)
+* Fun Stickers - [LINK](http://www.redbubble.com/people/gantman/shop/stickers?ref=portfolio_product_refinement)
 * under_score better than camelCase - [LINK](http://www.cs.kent.edu/~jmaletic/papers/ICPC2010-CamelCaseUnderScoreClouds.pdf)
 * Joybox gem - [LINK](http://joybox.io/)
 * Founder of Integrallis Using Joybox - [LINK](http://www.infoq.com/news/2013/09/ios-games-ruby)
