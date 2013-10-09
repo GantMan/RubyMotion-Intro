@@ -77,7 +77,10 @@ class GameLayer < Joybox::Core::Layer
         taco = TacoSprite.new
 
         move_action = Move.to position: taco.end_position, duration: 4.0
-        callback_action = Callback.with { |taco| @tacos.delete taco }
+        callback_action = Callback.with do |taco| 
+          @tacos.delete taco
+          self.removeChild(taco)
+        end
         taco.run_action Rotate.by angle: rand(360), duration: 4.0
         taco.run_action Sequence.with actions: [move_action, callback_action]
 
