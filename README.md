@@ -1,6 +1,8 @@
 Introduction to RubyMotion - The Cool Way to Build iOS Apps
 ================
 Presentation at [GNO code](https://twitter.com/gnocode) on October 10th, 2013
+[![ScreenShot](https://raw.github.com/GantMan/RubyMotion-Intro/master/img/video.png)](http://youtu.be/IxugKkWYQRg)
+
 ### `--->` [View Presentation Slides](http://gantman.github.io/RubyMotion-Intro/)
 [Printable Slides - Chrome Only](http://gantman.github.io/RubyMotion-Intro/?print-pdf#/)
 
